@@ -1,29 +1,24 @@
 module.exports = (sequelize,DataTypes) => {
 
-    const posts = sequelize.define("posts",{
-        title:{
-            type : DataTypes.STRING,
-            allowNull: false,
-        },
-        postText:{
-            type : DataTypes.STRING,
-            allowNull: false,
-        },
+    const Users = sequelize.define("Users",{
         username:{
             type : DataTypes.STRING,
             allowNull: false,
-        }
+        },
+        password:{
+            type : DataTypes.STRING,
+            allowNull: false,
+        },
 
     });
     //hasMany - adds a foreign key to target and plural association mixins to the source.
-    posts.associate = (models) =>{
-        posts.hasMany(models.Comments,{
+    Users.associate = (models) =>{
+        Users.hasMany(models.posts,{
             onDelete:"cascade"
         })
-        posts.hasMany(models.Likes,{
+        Users.hasMany(models.Likes,{
             onDelete:"cascade"
         })
     }
-    
-    return posts;
+    return Users;
 };

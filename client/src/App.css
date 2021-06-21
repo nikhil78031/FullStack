@@ -55,7 +55,27 @@ body {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+footer .username {
+  flex: 50%;
+}
+.footer .buttons {
+  flex: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
+.likeBttn {
+  color: white;
+}
+.unlikeBttn {
+  color: red;
+}
+
+.buttons label {
+  margin-right: 20px;
+  margin-left: 10px;
+}
 /* CREATE POST PAGE CSS */
 
 .createPostPage {
@@ -106,7 +126,6 @@ span {
 }
 
 
-
 .navbar {
   width: 100%;
   height: 70px;
@@ -115,11 +134,39 @@ span {
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
 }
+.navbar .links {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
+.navbar .loggedInContainer {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 .navbar a {
   margin-left: 20px;
   text-decoration: none;
   color: white;
+}
+
+.navbar button {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: white;
+}
+
+.navbar h1 {
+  text-align: right;
+  margin-right: 10px;
+  color: white;
+  font-weight: lighter;
 }
 .postPage {
   display: flex;
@@ -199,4 +246,30 @@ button {
 
 #individual .body {
   font-size: 25px;
+}
+.loginContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.loginContainer input,
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+}
+
+.loginContainer button {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.loginContainer input {
+  border: 2px solid dodgerblue;
 }
